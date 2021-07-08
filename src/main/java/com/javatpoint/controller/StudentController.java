@@ -1,13 +1,8 @@
 package com.javatpoint.controller;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import com.javatpoint.model.Student;
+import org.springframework.web.bind.annotation.*;
+import com.javatpoint.entity.Student;
 import com.javatpoint.service.StudentService;
 //creating RestController
 @RestController
@@ -42,4 +37,10 @@ private int saveStudent(@RequestBody Student student)
 studentService.saveOrUpdate(student);
 return student.getId();
 }
+
+    @PutMapping("/student")
+    private String updateStudent(@RequestBody Student student){
+        studentService.saveOrUpdate(student);
+        return student.getName();
+    }
 }
