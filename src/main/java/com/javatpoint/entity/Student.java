@@ -1,9 +1,7 @@
-package com.javatpoint.model;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-//mark class as an Entity 
+package com.javatpoint.entity;
+import javax.persistence.*;
+
+//mark class as an Entity
 @Entity
 //defining class name as Table name
 @Table
@@ -23,6 +21,10 @@ private int age;
 //defining email as column name
 @Column
 private String email;
+
+//@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "student")
+//private Course course;
+
 public int getId() 
 {
 return id;

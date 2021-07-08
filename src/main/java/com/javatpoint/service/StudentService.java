@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.javatpoint.model.Student;
+import com.javatpoint.entity.Student;
 import com.javatpoint.repository.StudentRepository;
 //defining the business logic
 @Service
